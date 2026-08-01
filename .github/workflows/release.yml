@@ -44,7 +44,8 @@ jobs:
       - name: Create independently signed update manifest
         shell: powershell
         run: |
-          $version = '${{ github.ref_name }}'.TrimStart('v')
+          $displayVersion = '${{ github.ref_name }}'.TrimStart('v')
+          $version = (($displayVersion -replace '-.*$', '') + '.0')
           $base = 'https://github.com/${{ github.repository }}/releases'
           .\tools\New-ReleaseManifest.ps1 -Version $version -DownloadUrl "$base/download/${{ github.ref_name }}/DiskCleanupAssistant.exe" -ReleaseNotesUrl "$base/tag/${{ github.ref_name }}" -ExePath .\artifacts\DiskCleanupAssistant.exe -PrivateKeyXmlBase64 $env:UPDATE_RSA_PRIVATE_KEY_XML_BASE64 -OutputPath .\artifacts\latest.json
       - name: Publish GitHub Release
