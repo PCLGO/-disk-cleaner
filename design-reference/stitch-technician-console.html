@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SystemMaster Technician Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#515f78",
+                      "on-background": "#191c1e",
+                      "surface": "#f8f9fb",
+                      "inverse-on-surface": "#f0f1f3",
+                      "surface-tint": "#005eb1",
+                      "error": "#ba1a1a",
+                      "on-surface": "#191c1e",
+                      "on-primary-container": "#dbe7ff",
+                      "secondary-fixed-dim": "#b9c7e4",
+                      "secondary-fixed": "#d6e3ff",
+                      "on-tertiary-container": "#ffdfdb",
+                      "on-secondary": "#ffffff",
+                      "outline": "#717783",
+                      "on-secondary-fixed": "#0d1c32",
+                      "on-surface-variant": "#414752",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#a6c8ff",
+                      "tertiary": "#a20012",
+                      "secondary-container": "#d2e0fe",
+                      "on-secondary-fixed-variant": "#39475f",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d9dadc",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e7e8ea",
+                      "tertiary-fixed-dim": "#ffb3ac",
+                      "primary-fixed": "#d5e3ff",
+                      "primary-container": "#0067c0",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9fb",
+                      "outline-variant": "#c1c6d4",
+                      "surface-container": "#edeef0",
+                      "tertiary-container": "#d0001b",
+                      "inverse-surface": "#2e3132",
+                      "on-tertiary-fixed-variant": "#93000f",
+                      "surface-container-highest": "#e1e2e4",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f8f9fb",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#55637d",
+                      "surface-container-low": "#f3f4f6",
+                      "surface-variant": "#e1e2e4",
+                      "primary-fixed-dim": "#a6c8ff",
+                      "on-tertiary-fixed": "#410003",
+                      "primary": "#004f96",
+                      "on-primary-fixed": "#001c3b",
+                      "on-primary-fixed-variant": "#004787",
+                      "tertiary-fixed": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "toolbar-height": "40px",
+                      "padding-standard": "12px",
+                      "gutter-compact": "4px",
+                      "sidebar-width": "64px",
+                      "margin-section": "16px"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "Microsoft YaHei", "sans-serif"
+                      ],
+                      "mono-data": [
+                              "jetbrainsMono", "monospace"
+                      ],
+                      "body-md": [
+                              "Microsoft YaHei", "sans-serif"
+                      ],
+                      "label-bold": [
+                              "Microsoft YaHei", "sans-serif"
+                      ],
+                      "headline-sm": [
+                              "Microsoft YaHei", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "mono-data": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      }
+          },
+        }
+    </script>
+<style>
+        body { background-color: #f0f1f3; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .material-symbols-outlined { font-size: 20px; }
+    </style>
+</head>
+<body>
+<!-- App Window Container (860x580) -->
+<div class="w-[860px] h-[580px] bg-background flex flex-col font-body-md border border-outline-variant shadow-lg rounded-DEFAULT overflow-hidden relative">
+<!-- TopAppBar (from JSON) -->
+<header class="h-[40px] w-full flex items-center justify-between px-padding-standard bg-surface-container-low border-b border-outline-variant flat no shadows transition-colors duration-150 z-20">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SystemMaster</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant hover:bg-surface-variant cursor-pointer p-[2px] rounded-DEFAULT">remove</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant hover:bg-surface-variant cursor-pointer p-[2px] rounded-DEFAULT">check_box_outline_blank</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant hover:bg-surface-variant cursor-pointer p-[2px] rounded-DEFAULT hover:bg-error hover:text-on-error">close</span>
+</div>
+</header>
+<!-- Main Workspace -->
+<div class="flex flex-1 relative h-[540px]">
+<!-- SideNavBar (from JSON) -->
+<nav class="w-sidebar-width h-full absolute left-0 top-0 flex flex-col items-center py-4 bg-secondary-fixed-dim bg-on-secondary-fixed-variant flat no shadows gap-4 border-r border-outline-variant z-10">
+<!-- Inactive Tab -->
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Home">
+<span class="material-symbols-outlined text-[24px]">home</span>
+</a>
+<!-- Active Tab (Quick Clean based on intent) -->
+<a class="flex flex-col items-center justify-center w-10 h-10 text-on-primary bg-primary-container rounded-lg scale-95 transition-transform duration-100 shadow-sm" href="#" title="Quick Clean">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Deep Scan">
+<span class="material-symbols-outlined text-[24px]">search_check</span>
+</a>
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Large Files">
+<span class="material-symbols-outlined text-[24px]">folder_open</span>
+</a>
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Duplicates">
+<span class="material-symbols-outlined text-[24px]">file_copy</span>
+</a>
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Uninstaller">
+<span class="material-symbols-outlined text-[24px]">delete_sweep</span>
+</a>
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="History">
+<span class="material-symbols-outlined text-[24px]">history</span>
+</a>
+<div class="mt-auto">
+<a class="flex flex-col items-center justify-center w-10 h-10 text-outline-variant hover:bg-secondary-container scale-95 transition-transform duration-100 rounded-DEFAULT" href="#" title="Settings">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</a>
+</div>
+</nav>
+<!-- Split Pane Content Area -->
+<main class="ml-sidebar-width flex-1 flex flex-col h-full bg-surface">
+<div class="flex-1 flex overflow-hidden">
+<!-- Left Pane: Capacity Scales -->
+<div class="w-[260px] p-margin-section border-r border-outline-variant bg-surface-container-lowest flex flex-col gap-6">
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-label-bold text-label-bold text-on-surface">Drive C:\</span>
+<span class="font-mono-data text-mono-data text-error">93% 已用</span>
+</div>
+<div class="h-[4px] bg-surface-variant w-full overflow-hidden border border-outline-variant">
+<div class="h-full bg-error w-[93%]"></div>
+</div>
+<div class="text-right font-mono-data text-mono-data text-on-surface-variant mt-1">6.8 GB 可用</div>
+</div>
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-label-bold text-label-bold text-on-surface">Drive D:\</span>
+<span class="font-mono-data text-mono-data text-primary">15% 已用</span>
+</div>
+<div class="h-[4px] bg-surface-variant w-full overflow-hidden border border-outline-variant">
+<div class="h-full bg-primary w-[15%]"></div>
+</div>
+<div class="text-right font-mono-data text-mono-data text-on-surface-variant mt-1">100.4 GB 可用</div>
+</div>
+</div>
+<!-- Right Pane: Scan Preparation List -->
+<div class="flex-1 p-margin-section bg-surface overflow-y-auto">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant mb-3 uppercase tracking-wide">扫描目标</h2>
+<!-- Zebra Striped Data Table / List -->
+<div class="flex flex-col border border-outline-variant bg-surface-container-lowest">
+<!-- Item 1 -->
+<div class="flex items-center justify-between py-[4px] px-[12px] bg-surface-container-lowest hover:bg-secondary-container transition-colors border-b border-outline-variant last:border-b-0 cursor-default">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_zip</span>
+<span class="font-body-md text-on-surface">系统临时文件</span>
+</div>
+<span class="font-mono-data text-mono-data text-primary">就绪</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between py-[4px] px-[12px] bg-surface-bright hover:bg-secondary-container transition-colors border-b border-outline-variant last:border-b-0 cursor-default">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">language</span>
+<span class="font-body-md text-on-surface">浏览器缓存</span>
+</div>
+<span class="font-mono-data text-mono-data text-primary">就绪</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between py-[4px] px-[12px] bg-surface-container-lowest hover:bg-secondary-container transition-colors border-b border-outline-variant last:border-b-0 cursor-default">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+<span class="font-body-md text-on-surface">系统日志与缓存</span>
+</div>
+<span class="font-mono-data text-mono-data text-primary">就绪</span>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between py-[4px] px-[12px] bg-surface-bright hover:bg-secondary-container transition-colors border-b border-outline-variant last:border-b-0 cursor-default">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">delete</span>
+<span class="font-body-md text-on-surface">回收站</span>
+</div>
+<span class="font-mono-data text-mono-data text-primary">就绪</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="h-[64px] border-t border-outline-variant px-margin-section flex items-center justify-between bg-surface-container">
+<div class="flex flex-col">
+<div class="flex gap-4 mb-1">
+<a class="font-body-md text-primary font-semibold hover:underline decoration-1 underline-offset-2" href="#">深度扫盘</a>
+<a class="font-body-md text-primary font-semibold hover:underline decoration-1 underline-offset-2" href="#">大文件</a>
+<a class="font-body-md text-primary font-semibold hover:underline decoration-1 underline-offset-2" href="#">重复文件</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                            扫描不会删除任何文件
+                        </div>
+</div>
+<button class="bg-primary-container text-on-primary px-6 h-[28px] flex items-center justify-center font-label-bold text-label-bold rounded-DEFAULT hover:bg-on-primary-fixed-variant transition-colors border border-transparent focus:border-outline-variant focus:outline-none">
+                        开始快速扫描
+                    </button>
+</div>
+</main>
+</div>
+</div>
+</body></html>
