@@ -1,0 +1,26 @@
+name: build
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test
+        shell: powershell
+        run: .\build.ps1 -Configuration Release
+      - name: Upload unsigned CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DiskCleanupAssistant-unsigned-ci-only
+          path: |
+            artifacts/DiskCleanupAssistant.exe
+            artifacts/DiskCleanupAssistant.exe.sha256
+          if-no-files-found: error
