@@ -1,9 +1,9 @@
 {
-  "Version": "0.1.0",
-  "PublishedUtc": "2026-07-31T00:00:00.0000000Z",
+  "Version": "1.0.1.0",
+  "PublishedUtc": "2026-08-01T00:00:00.0000000Z",
   "MinimumOsBuild": 19045,
-  "DownloadUrl": "https://github.com/PCLGO/-disk-cleaner/releases/download/v0.1.0-beta/DiskCleanupAssistant.exe",
+  "DownloadUrl": "https://github.com/PCLGO/-disk-cleaner/releases/download/v1.00.1-beta/DiskCleanupAssistant.exe",
   "Sha256": "由发布流水线生成",
-  "ReleaseNotesUrl": "https://github.com/PCLGO/-disk-cleaner/releases/tag/v0.1.0-beta",
+  "ReleaseNotesUrl": "https://github.com/PCLGO/-disk-cleaner/releases/tag/v1.00.1-beta",
   "Signature": "由独立RSA发布私钥生成"
 }

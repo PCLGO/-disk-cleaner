@@ -2,7 +2,7 @@
 
 本项目遵循[语义化版本](https://semver.org/lang/zh-CN/)规范。
 
-## [0.1.0-beta] - 2026-08-01
+## [1.00.1-beta] - 2026-08-01
 
 首个公开测试版：
 
@@ -14,4 +14,4 @@
 - 普通文件默认移入回收站，永久操作需要独立二次确认。
 - 新增单 EXE 构建、自动化测试、发布清单和更新签名基础设施。
 
-[0.1.0-beta]: https://github.com/PCLGO/-disk-cleaner/releases/tag/v0.1.0-beta
+[1.00.1-beta]: https://github.com/PCLGO/-disk-cleaner/releases/tag/v1.00.1-beta

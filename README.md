@@ -1,6 +1,6 @@
 # Disk Cleaner Skill
 
-[![Version](https://img.shields.io/badge/version-0.1.0--beta-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.00.1--beta-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 > ⚠️ **免责声明（请先阅读）**：本项目主要由 AI 辅助编写，尚未经过完整的人工安全审计。请在充分理解源码、候选项身份和删除影响后使用；重要数据应另行备份。
